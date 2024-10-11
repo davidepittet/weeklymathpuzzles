@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-@3m^k$pnyu(l-u(uzmahkpin84sp()_lqsry_j)!s!6ls593mb
 DEBUG = True
 
 if DEBUG:
-    config_path = 'D:\\Users\\Davide\\Desktop\\WeeklyMathPuzzles\\wmp-django\\wmp\\wmp\\config.json'
+    config_path = 'D:\\Users\\Davide\\Desktop\\WeeklyMathPuzzles\\config.json'
 else:
     config_path = '/var/www/wmp-config/config.json'
 
@@ -143,7 +143,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 if DEBUG:
     STATICFILES_DIRS = [
-        'D:\\Users\\Davide\\Desktop\\WeeklyMathPuzzles\\frontend\\static\\'
+        'D:\\Users\\Davide\\Desktop\\WeeklyMathPuzzles\\weeklymathpuzzles\\frontend\\static\\'
     ]
 else:
     STATIC_ROOT = '/var/www/html/wmp'
