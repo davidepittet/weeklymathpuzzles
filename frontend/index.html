@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Weekly Math Puzzles</title>
+  
+  <link rel="icon" href="static/images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="static/style-general.css">
+  <link rel="stylesheet" href="static/style-index.css">
+  <link rel="stylesheet" href="static/style-header.css">
+
+  <script>
+    function sub(correctId){
+        var elem = document.getElementById("answers");
+        var radioButtons = document.getElementsByName("answer");
+        var res = document.getElementsByClassName("result");
+        var counter = 0;
+        var selectedId = 1;
+        var formButton = document.getElementById("submitForm").getElementsByClassName("button")[0];
+
+        if (formButton.value == "Submit"){
+            for (let radio of radioButtons){
+                counter++;
+
+                if (radio.checked) {
+                    selectedId = counter;
+                }
+            }
+            
+
+            if (selectedId == correctId) {
+                res[0].innerHTML = "Correct answer!";
+            }
+            else {
+                res[0].innerHTML = "Wrong answer!";
+            }
+
+            res[0].style.display = "flex";
+            formButton.value = "Back";
+            elem.style.display = "none";
+        }
+        else {
+            formButton.value = "Submit";
+            elem.style.display = "flex";
+            res[0].style.display = "none";
+        }
+
+    }
+  </script>
+</head>
+<body>
+
+    <nav class="header">
+        <a href=""><button type="button" class="header-button button first-header-button" id="highlighted-button">This week</button></a><!--
+        --><a href="/archive"><button type="button" class="header-button button">Archive</button></a><!--
+        --><a href="/leaderboard"><button type="button" class="header-button button">Leaderboard</button></a>
+    </nav>
+
+    <div class="main-section">
+        <div id="question-title">
+            PUZZLE OF THE WEEK
+        </div>
+        
+        <div id="question">
+            <div>{% autoescape off %}{{question.text}}{% endautoescape %}</div>
+        </div>
+
+
+        <div>
+
+            <form id="answers">
+                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans1}}{% endautoescape %}</label>
+                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans2}}{% endautoescape %}</label>
+                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans3}}{% endautoescape %}</label>
+                <br><br>
+                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans4}}{% endautoescape %}</label>
+                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans5}}{% endautoescape %}</label>
+                <br><br>
+            </form>
+            
+            <div class="result">Correct answer!</div>
+
+            <div id="submitForm">
+                <input class="button" type="button" value="Submit" onclick="sub('{{question.correctAnswer}}')">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

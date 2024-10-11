@@ -1,0 +1,13 @@
+* {
+    background-color: white;
+    font-family: ui-monospace, monospace;
+}
+
+div {
+    margin: auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}

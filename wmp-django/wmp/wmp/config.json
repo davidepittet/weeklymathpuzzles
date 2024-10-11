@@ -1,0 +1,12 @@
+{
+    "ALLOWED_HOSTS": ["159.89.22.225", "weeklymathpuzzles.fun", "www.weeklymathpuzzles.fun", "localhost", "127.0.0.1"],
+    "TEMPLATES_DIRS_DEBUG": "D:\\Users\\Davide\\Desktop\\WeeklyMathPuzzles\\frontend\\",
+    "TEMPLATES_DIRS_PRODUCTION": "/var/www/html/wmp/",
+    "POSTGRES_DB": {
+        "NAME": "wmp",
+        "USER": "admin",
+        "PASSWORD": "ACBQamq_!6L4@kv",
+        "HOST": "159.89.22.225",
+        "PORT": "5432"
+    }
+}

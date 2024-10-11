@@ -1,0 +1,31 @@
+html {
+    height: 100%;
+}
+
+* {
+    /*font-family: ui-monospace, monospace;*/
+    font-family: 'Roboto';
+    background-color: hsla(0, 0%, 100%, 0);
+}
+
+div {
+    margin: auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background: white;
+}
+
+.button {
+    font-family: ui-monospace, monospace;
+    color: rgb(58, 58, 58);
+}
