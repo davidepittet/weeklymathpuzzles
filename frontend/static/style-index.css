@@ -1,63 +1,65 @@
 
-
-#question-title {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-weight: bold;
-    font-size: 30px;
+.question{
+    position: relative;
+    top: 120px;
+    width: 75%;
+    background-color: #C1D8F0;
+    padding: 30px;
+    color: #4663AC;
+    font-size: 20px;
 }
 
-#question {
-    border: 0px solid rgb(235, 235, 220);
-    border-radius: 10px;
-    width: 60%;
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  /* in order: x offset, y offset, blur size, spread size, color */
-  /* blur size and spread size are optional (they default to 0) */
-    background-color: rgba(173, 216, 230, 0.447);
-    margin-bottom: 50px;
-    font-family: 'Roboto';
-    line-height: 30px;
+.answers {
+    position: relative;
+    top: 120px;
+    width: 75%;
+    height: 500px;
+    padding: 30px;
+    background-color: #E1F1FD;
+    font-size: 20px;
 }
 
-#question *{
-    background-color: rgba(0,0,0,0);
-    font-family: 'Roboto';
-}
-
-.answer {
-    margin-left: 10px;
-    margin-right: 40px;
-    font-family: 'Roboto';
-}
-
-#answers, .result{
-    width: 60%;
-    height: 100px;
-    align-items: center;
+#form-answers {
+    position: relative;
+    top: 30px;
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.result{
+#submitForm{
+    position: relative;
+    top: 30px;
+}
+
+input[type="radio"] {
     display: none;
 }
 
-div#submitForm input {
-    position: relative;
-    left: 20%;
-    margin-top: 20px;
-    cursor: pointer;
-    border: 0px;
-    border-radius: 2px;
-    font-size: 20px;
-    background-color: rgba(211, 211, 211, 0.25);
-    padding: 10px;
+.answer {
+    margin-top: 10px;
+    padding: 15px;
+    border: solid 2px;
+    border-radius: 5px;
+    background-color: #D2DEEB;
+    color: #4663AC;
+    border-color: #4663AC;
+    font-size: 25px;
 }
 
-div#submitForm input:hover {
-    background-color: rgba(173, 216, 230, 0.447);
+input[type="radio"]:checked + label{
+    background-color: #4663AC;
+    color: #D2DEEB;
 }
+
+input[type="radio"]:hover + label{
+    cursor: pointer;
+}
+
+#submitForm {
+    position: relative;
+    top: 50px;
+}
+
+
+
+

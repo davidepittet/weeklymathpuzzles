@@ -12,7 +12,7 @@
 
   <script>
     function sub(correctId){
-        var elem = document.getElementById("answers");
+        var elem = document.getElementById("form-answers");
         var radioButtons = document.getElementsByName("answer");
         var res = document.getElementsByClassName("result");
         var counter = 0;
@@ -57,34 +57,28 @@
         --><a href="/leaderboard"><button type="button" class="header-button button">Leaderboard</button></a>
     </nav>
 
-    <div class="main-section">
-        <div id="question-title">
-            PUZZLE OF THE WEEK
-        </div>
-        
-        <div id="question">
-            <div>{% autoescape off %}{{question.text}}{% endautoescape %}</div>
-        </div>
+    <div class="question">
+        {% autoescape off %}{{question.text}}{% endautoescape %}
+    </div>
+    
+    <div class="answers">
+        <form id="form-answers">
+            <input type="radio" name="answer" id="ans1"><label class="answer" for="ans1">{% autoescape off %}{{question.ans1}}{% endautoescape %}</label>
+            <input type="radio" name="answer" id="ans2"><label class="answer" for="ans2">{% autoescape off %}{{question.ans2}}{% endautoescape %}</label>
+            <input type="radio" name="answer" id="ans3"><label class="answer" for="ans3">{% autoescape off %}{{question.ans3}}{% endautoescape %}</label>
+            <input type="radio" name="answer" id="ans4"><label class="answer" for="ans4">{% autoescape off %}{{question.ans4}}{% endautoescape %}</label>
+            <input type="radio" name="answer" id="ans5"><label class="answer" for="ans5">{% autoescape off %}{{question.ans5}}{% endautoescape %}</label>
+        </form>
 
+        <div class="result"></div>
 
-        <div>
-
-            <form id="answers">
-                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans1}}{% endautoescape %}</label>
-                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans2}}{% endautoescape %}</label>
-                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans3}}{% endautoescape %}</label>
-                <br><br>
-                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans4}}{% endautoescape %}</label>
-                <input type="radio" name="answer"><label class="answer">{% autoescape off %}{{question.ans5}}{% endautoescape %}</label>
-                <br><br>
-            </form>
-            
-            <div class="result">Correct answer!</div>
-
-            <div id="submitForm">
-                <input class="button" type="button" value="Submit" onclick="sub('{{question.correctAnswer}}')">
-            </div>
+        <div id="submitForm">
+            <input class="button" type="button" value="Submit" onclick="sub('{{question.correctAnswer}}')">
         </div>
     </div>
+
+    
+
+
 </body>
 </html>
