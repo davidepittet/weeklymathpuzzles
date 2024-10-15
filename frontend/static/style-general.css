@@ -25,11 +25,6 @@ body {
     background: white;
 }
 
-.button {
-    font-family: ui-monospace, monospace;
-    color: rgb(58, 58, 58);
-}
-
 input:hover {
     cursor: pointer;
 }
