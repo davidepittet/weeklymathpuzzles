@@ -7,6 +7,7 @@
     padding: 30px;
     color: #4663AC;
     font-size: 20px;
+    font-family: 'Roboto';
 }
 
 .answers {
@@ -24,6 +25,14 @@
     top: 30px;
     display: flex;
     flex-direction: column;
+}
+
+.result {
+    position: relative;
+    height: 371.23px;
+    display: none;
+    justify-content: center;
+    line-height: 371.23px;
 }
 
 #submitForm{
@@ -58,6 +67,12 @@ input[type="radio"]:hover + label{
 #submitForm {
     position: relative;
     top: 50px;
+}
+
+.youtube{
+    position: relative;
+    top: 60px;
+    font-size: 30px;
 }
 
 
