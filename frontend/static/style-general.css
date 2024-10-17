@@ -20,9 +20,10 @@ a {
 
 body {
     margin: 0px;
+    margin-bottom: 200px;
     height: 100%;
     background-repeat: no-repeat;
-    background: white;
+    background: #d2deeb60;
 }
 
 input:hover {
